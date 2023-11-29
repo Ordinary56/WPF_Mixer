@@ -1,0 +1,47 @@
+﻿<Window x:Class="WPF_Mixer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Mixer"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="270"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label VerticalAlignment="Bottom"
+               HorizontalAlignment="Center"
+               Content="Férfiak"
+               FontSize="24"/>
+        <ListView x:Name="lw_Man" Grid.Row="1" Margin="11" Background="LightSeaGreen" />
+        <TextBox x:Name="tb_man" KeyDown="tb_man_KeyDown" Grid.Row="2" VerticalAlignment="Center"
+                 Width="200"/>
+        <Label VerticalAlignment="Bottom"
+               Grid.Column="1"
+               HorizontalAlignment="Center"
+               Content="Nők"
+               FontSize="24"/>
+        <ListView Name="lw_Woman" Grid.Row="1" Grid.Column="1" Margin="11" Background="LightSeaGreen" />
+        <TextBox x:Name="tb_woman" KeyDown="tb_woman_KeyDown" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center"
+                 Width="200"/>
+        <Button Grid.Row="3" Grid.ColumnSpan="2" VerticalAlignment="Center"
+                Content="Mix"
+                Click="MixPairs"
+                HorizontalAlignment="Center"
+                Height="50"
+                Width="200"/>
+        <ListBox Grid.Row="4" Grid.ColumnSpan="2" 
+                 Background="AliceBlue"
+                 x:Name="lb_Result"/>
+
+    </Grid>
+</Window>
