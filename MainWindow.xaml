@@ -23,7 +23,7 @@
                Content="Férfiak"
                FontSize="24"/>
         <ListView x:Name="lw_Man" Grid.Row="1" Margin="11" Background="LightSeaGreen" />
-        <TextBox x:Name="tb_man" KeyDown="tb_man_KeyDown" Grid.Row="2" VerticalAlignment="Center"
+        <TextBox x:Name="tb_man" KeyDown="TextKeydown" Grid.Row="2" VerticalAlignment="Center"
                  Width="200"/>
         <Label VerticalAlignment="Bottom"
                Grid.Column="1"
@@ -31,7 +31,7 @@
                Content="Nők"
                FontSize="24"/>
         <ListView Name="lw_Woman" Grid.Row="1" Grid.Column="1" Margin="11" Background="LightSeaGreen" />
-        <TextBox x:Name="tb_woman" KeyDown="tb_woman_KeyDown" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center"
+        <TextBox x:Name="tb_woman"  KeyDown="TextKeydown" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center"
                  Width="200"/>
         <Button Grid.Row="3" Grid.ColumnSpan="2" VerticalAlignment="Center"
                 Content="Mix"
